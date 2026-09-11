@@ -271,13 +271,37 @@ def build_about():
     return has_photo
 
 
+SITE_URL = "https://curryaerials.com"
+
+
+def build_seo_files(locations):
+    pages = ["", "portfolio.html", "about.html"] + [f"locations/{loc['slug']}.html" for loc in locations]
+    urls = "\n".join(
+        f"  <url><loc>{SITE_URL}/{p}</loc></url>" for p in pages
+    )
+    sitemap = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{urls}
+</urlset>
+"""
+    write(os.path.join(ROOT, "sitemap.xml"), sitemap)
+
+    robots = f"""User-agent: *
+Allow: /
+
+Sitemap: {SITE_URL}/sitemap.xml
+"""
+    write(os.path.join(ROOT, "robots.txt"), robots)
+
+
 def main():
     locations = parse_locations()
     build_index(locations)
     build_portfolio(locations)
     build_location_pages(locations)
     has_about_photo = build_about()
-    print(f"Built: index.html, portfolio.html, about.html, and {len(locations)} location pages.")
+    build_seo_files(locations)
+    print(f"Built: index.html, portfolio.html, about.html, {len(locations)} location pages, sitemap.xml, robots.txt.")
     if not has_about_photo:
         print("NOTE: no about photo found yet at photos/web/full/about/about.jpg -- about.html was built without one.")
 
