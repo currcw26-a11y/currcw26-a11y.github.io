@@ -172,6 +172,7 @@ img { display: block; }
 }
 @media (max-width: 720px) {
   .hero-sub { margin-left: 0; }
+  .hero-content { padding-bottom: 500px; }
 }
 @media (max-height: 700px) {
   .hero-content { padding-bottom: 180px; }
