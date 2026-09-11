@@ -1,0 +1,8 @@
+# Original, full-resolution photos -- never published. Only the resized,
+# metadata-stripped copies in photos/web/ are meant to go on the live site.
+photos/locations/
+photos/about/about.jpg
+
+# Local tool config and caches -- not needed on GitHub
+.claude/
+scripts/__pycache__/

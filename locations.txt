@@ -1,0 +1,25 @@
+# Locations for the drone photography site
+# Format: Name | Date range | Cover photo filename (optional)
+#
+# - Name and date range: shown on the site. Edit freely.
+# - Cover photo: which photo shows on the Portfolio page tile for that location.
+#   Leave blank to auto-pick the first photo. To choose your own, type the exact
+#   filename from photos/locations/<that location's folder> (e.g. DJI_0142.JPG) --
+#   capitalization doesn't matter.
+# - To add a new location: put its photos in a new folder under photos/locations,
+#   run scripts/process-photos.ps1, then add one line here.
+# - Locations show on the Portfolio page in the SAME ORDER as the lines below --
+#   move a line up or down to reorder it on the site.
+
+Oregon Coast | 2022-08-08 to 2025-07-05 | DJI_0047
+Switzerland | 2026-06-26 to 2026-06-28 | DJI_0621
+Colorado | 2021-12-31 to 2025-12-31 | DJI_0297
+Hawaii | 2026-06-06 to 2026-06-07 | DJI_0551
+Costa Rica | 2025-03-10 to 2025-03-13 | DJI_0243
+Cabo San Lucas, Mexico | 2025-11-22 to 2025-11-25 | DJI_0507
+New Mexico | 2022-11-06 to 2025-09-27 | DJI_0419
+Florida | 2022-04-17 to 2023-03-17 | DJI_0038
+Long Island | 2024-06-18 to 2024-06-21 | DJI_0172
+Grand Cayman | 2023-12-31 | DJI_0139
+Dallas, Texas | 2023-05-10 to 2024-05-22 | DJI_0119
+New Orleans, Louisiana | 2023-03-15 | DJI_0111
